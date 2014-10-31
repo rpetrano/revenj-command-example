@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEF4CC78-BCAC-4C62-BB43-9DEDC0CA7190}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RevenjCommandExample</RootNamespace>
+    <AssemblyName>RevenjCommandExample</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="cp ${TargetFile} ${ProjectDir}/../../server/plugins/" workingdir="${ProjectDir}" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Revenj.Api.Interface">
+      <HintPath>..\..\server\bin\Revenj.Api.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Logging.Interface">
+      <HintPath>..\..\server\bin\Revenj.Logging.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Wcf">
+      <HintPath>..\..\server\bin\Revenj.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="Revenj.DomainPatterns.Interface">
+      <HintPath>..\..\server\bin\Revenj.DomainPatterns.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Extensibility.Interface">
+      <HintPath>..\..\server\bin\Revenj.Extensibility.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Processing.Interface">
+      <HintPath>..\..\server\bin\Revenj.Processing.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Serialization.Interface">
+      <HintPath>..\..\server\bin\Revenj.Serialization.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Security.Interface">
+      <HintPath>..\..\server\bin\Revenj.Security.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="GeneratedModel">
+      <HintPath>..\..\server\cache\GeneratedModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Plugins.Server.Commands">
+      <HintPath>..\..\server\bin\Revenj.Plugins.Server.Commands.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RevenjCommandExample.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

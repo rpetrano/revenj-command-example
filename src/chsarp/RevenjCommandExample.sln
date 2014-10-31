@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevenjCommandExample.Mono", "RevenjCommandExample.Mono.csproj", "{CEF4CC78-BCAC-4C62-BB43-9DEDC0CA7190}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "dsl", "..\dsl\", "{DEBD0E3B-0314-4964-864D-06AE62FE566A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/dsl"
+		Debug.AspNetCompiler.PhysicalPath = "..\dsl\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\dsl\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/dsl"
+		Release.AspNetCompiler.PhysicalPath = "..\dsl\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\dsl\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "7116"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(DslPlatformSolutionProperties) = preSolution
+		ProjectId = 7528b33c-818a-4048-826e-9a3627bcb62c
+		User = robi_petranovic@yahoo.com
+		ClientLibrary.Compile = False
+		ClientLibrary.Name = 
+		ClientLibrary.Target = 
+		ClientLibrary.Dependencies = 
+		ClientLibrary.ActiveRecord = True
+		ClientLibrary.HelperMethods = True
+		PortableLibrary.Compile = False
+		PortableLibrary.Name = 
+		PortableLibrary.Target = 
+		PortableLibrary.Dependencies = 
+		PortableLibrary.ActiveRecord = True
+		PortableLibrary.HelperMethods = True
+		ServerLibrary.Compile = False
+		ServerLibrary.Name = GeneratedModel
+		ServerLibrary.Target = ..\..\server\cache
+		ServerLibrary.Dependencies = ..\..\server\bin
+		ServerLibrary.ActiveRecord = True
+		ServerLibrary.HelperMethods = True
+		ConfirmUnsafeChanges = False
+		DiffBeforeCompile = True
+		AutoLogin = False
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEF4CC78-BCAC-4C62-BB43-9DEDC0CA7190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF4CC78-BCAC-4C62-BB43-9DEDC0CA7190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF4CC78-BCAC-4C62-BB43-9DEDC0CA7190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF4CC78-BCAC-4C62-BB43-9DEDC0CA7190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEBD0E3B-0314-4964-864D-06AE62FE566A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEBD0E3B-0314-4964-864D-06AE62FE566A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEBD0E3B-0314-4964-864D-06AE62FE566A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEBD0E3B-0314-4964-864D-06AE62FE566A}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
